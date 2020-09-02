@@ -40,7 +40,7 @@ void MSTK_voidSetBusyWait(u32 Copy_u32Ticks )
 	while( (GET_BIT(MSTK->CTRL,16)) == 0);
 	
 	/* Stop Timer */
-	SET_BIT(MSTK->CTRL, 0);
+	CLR_BIT(MSTK->CTRL, 0);
 	MSTK -> LOAD = 0;
 	MSTK -> VAL  = 0;  
 }
@@ -87,7 +87,7 @@ void MSTK_voidStopInterval (void)
 	CLR_BIT(MSTK->CTRL, 1);
 	
 	/* Stop Timer */
-	SET_BIT(MSTK->CTRL, 0);
+	CLR_BIT(MSTK->CTRL, 0);
 	MSTK -> LOAD = 0;
 	MSTK -> VAL  = 0; 
 }
