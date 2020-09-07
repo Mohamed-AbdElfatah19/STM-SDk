@@ -8,11 +8,17 @@
 #ifndef OS_PRIVATE_H
 #def OS_PRIVATE_H
 
+typedef enum states{
+ READY ,
+ SUSPEND ,
+ RUNNING 
+}Task_States_t;
+
 typedef struct {
  u16 periodicity ;
   void (*Fptr) (void) ;
  u8 firstDelay ;
- u8 State ;
+ Task_States_t State ;
 }Task ;
 
 
