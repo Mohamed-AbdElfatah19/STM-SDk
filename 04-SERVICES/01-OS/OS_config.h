@@ -9,6 +9,6 @@
 
 #define NUMBER_OF_TASKS 4
 
-
+#define OS_TICK  1000 
 
 #endif
