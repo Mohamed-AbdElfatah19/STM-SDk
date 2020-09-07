@@ -47,7 +47,7 @@ void SOS_voidStart (void)
   /* initialization */
   MSTK_voidInit();
   /* Tick => 1msec , STK operates on 8MHz/8 => 1 microsecond , 1000micro = 1milli  */
-  MSTK_voidSetIntervalPeriodic(1000  , Scheduler );
+  MSTK_voidSetIntervalPeriodic(OS_TICK  , Scheduler );
 }
 
 
