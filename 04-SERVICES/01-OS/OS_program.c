@@ -29,8 +29,25 @@ void SOS_voidCreateTask(u8 Copy_u8ID , u16 Copy_u16Periodicity , void (*ptr) (vo
 }
 void SOS_voidStart (void)   
 {
-  
-  
+  /* initialization */
+  MSTK_voidInit();
+  /* Tick => 1msec , STK operates on 8MHz/8 => 1 microsecond , 1000micro = 1milli  */
+  MSTK_voidSetIntervalPeriodic(1000  , Scheduler );
+}
+
+volatile u16 TickCounts = 0 ;
+
+/* control order of execution of Tasks */
+static void Scheduler(void)
+{
+  for(u8 i =0 ; i< NUMBER_OF_TASKS ; i++)
+  {
+    if(TickCounts % OS_Tasks[i].periodicity == 0)
+    {
+        OS_Tasks.Fptr() ;
+    }
+  }
+  TickCounts++ ;
   
   
 }
