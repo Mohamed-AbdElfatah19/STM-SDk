@@ -11,6 +11,7 @@
 typedef struct {
  u16 periodicity ;
   void (*Fptr) (void) ;
+ u8 firstDelay ;
 }Task ;
 
 
