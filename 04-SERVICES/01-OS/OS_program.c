@@ -52,3 +52,10 @@ static void Scheduler(void)
   
   
 }
+void SOS_voidSuspendTask (u8 Copy_u8ID) 
+
+void SOS_voidResumeTask  (u8 Copy_u8ID) ;
+
+void SOS_voidDeleteTask (u8 Copy_u8ID)  ;  
+
+u8 SOS_u8GetTaskstate (u8 Copy_u8ID)   ;
