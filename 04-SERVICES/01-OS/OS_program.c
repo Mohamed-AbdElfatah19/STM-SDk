@@ -19,7 +19,7 @@
 static TASK OS_Tasks[NUMBER_OF_TASKS] = {NULL};
 
 
-void SOS_voidCreateTask(u8 Copy_u8ID , u16 Copy_u16Periodicity , void (*ptr) (void) )
+void SOS_voidCreateTask(u8 Copy_u8ID , u16 Copy_u16Periodicity , void (*ptr) (void) , u8 Copy_u8FirstDelay)
 {
   
   OS_Tasks[Copy_u8ID].periodicity = Copy_u16Periodicity ;
