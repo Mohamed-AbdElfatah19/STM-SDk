@@ -9,6 +9,7 @@
 
 #define NUMBER_OF_TASKS 4
 
+/* determine tick in micro sec => here, tick = 1 msec */
 #define OS_TICK  1000 
 
 #endif
