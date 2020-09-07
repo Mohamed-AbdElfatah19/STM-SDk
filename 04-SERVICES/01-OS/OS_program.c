@@ -17,6 +17,7 @@
 #define NULL (void *)0
 
 static TASK OS_Tasks[NUMBER_OF_TASKS] = {NULL};
+volatile u16 TickCounts = 0 ; 
 
 
 void SOS_voidCreateTask(u8 Copy_u8ID , u16 Copy_u16Periodicity , void (*ptr) (void) , u8 Copy_u8FirstDelay)
@@ -24,6 +25,7 @@ void SOS_voidCreateTask(u8 Copy_u8ID , u16 Copy_u16Periodicity , void (*ptr) (vo
   
   OS_Tasks[Copy_u8ID].periodicity = Copy_u16Periodicity ;
   OS_Tasks[Copy_u8ID].Fptr = ptr  ;
+  OS_Tasks[Copy_u8ID].firstDelay = Copy_u8FirstDelay ;
   
   
 }
@@ -35,7 +37,6 @@ void SOS_voidStart (void)
   MSTK_voidSetIntervalPeriodic(1000  , Scheduler );
 }
 
-volatile u16 TickCounts = 0 ;
 
 /* control order of execution of Tasks */
 static void Scheduler(void)
