@@ -5,7 +5,7 @@
 #define NUMBER_OF_ROWS 8
 #define NUMBER_OF_COLS 8
 
-
+/* please , write pin pair PORT,pin */
 #define HLEDMAT_ROW_0      GPIOA,7
 #define HLEDMAT_ROW_1      GPIOA,6
 #define HLEDMAT_ROW_2      GPIOA,5
@@ -15,7 +15,7 @@
 #define HLEDMAT_ROW_6      GPIOA,1
 #define HLEDMAT_ROW_7      GPIOA,0
 
-
+/* please , write pin pair PORT,pin */
 #define HLEDMAT_COL_0      GPIOB,8
 #define HLEDMAT_COL_1      GPIOB,6
 #define HLEDMAT_COL_2      GPIOB,5
