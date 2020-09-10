@@ -16,13 +16,13 @@
 #define HLEDMAT_ROW_7      GPIOA,0
 
 /* please , write pin pair PORT,pin */
-#define HLEDMAT_COL_0      GPIOB,8
-#define HLEDMAT_COL_1      GPIOB,6
+#define HLEDMAT_COL_0      GPIOB,0
+#define HLEDMAT_COL_1      GPIOB,1
 #define HLEDMAT_COL_2      GPIOB,5
-#define HLEDMAT_COL_3      GPIOB,4
-#define HLEDMAT_COL_4      GPIOB,3
-#define HLEDMAT_COL_5      GPIOB,2
-#define HLEDMAT_COL_6      GPIOB,1
-#define HLEDMAT_COL_7      GPIOB,0
+#define HLEDMAT_COL_3      GPIOB,6
+#define HLEDMAT_COL_4      GPIOB,7
+#define HLEDMAT_COL_5      GPIOB,8
+#define HLEDMAT_COL_6      GPIOB,9
+#define HLEDMAT_COL_7      GPIOB,10
 
 #endif
