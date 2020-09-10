@@ -2,6 +2,9 @@
 #define HLEDMAT_CONFIG_H
 
 
+#define NUMBER_OF_ROWS 8
+#define NUMBER_OF_COLS 8
+
 
 #define HLEDMAT_ROW_0      GPIOA,7
 #define HLEDMAT_ROW_1      GPIOA,6
