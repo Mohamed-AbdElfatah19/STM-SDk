@@ -2,7 +2,7 @@
 void MDMA_voidChannelInit (void) 
 {
   #if CHANNEL_ID == 1 
-    DMA_BASE_ADDRESS->channel[CHANNEL_ID].CCR = ;
+    DMA_BASE_ADDRESS->channel[CHANNEL_ID_1].CCR = ;
   
 }
 
