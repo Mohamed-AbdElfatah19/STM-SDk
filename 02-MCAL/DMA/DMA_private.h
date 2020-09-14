@@ -25,6 +25,6 @@
    DMA_channel channel[7]    ;
   }DMA_t ;
   
-#define DMA_BASE_ADDRESS ((volatile DMA_t*)0x040020000)
+#define DMA_BASE_ADDRESS ((volatile DMA_t*)0x40020000)
   
   #endif 
