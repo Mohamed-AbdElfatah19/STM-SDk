@@ -23,7 +23,7 @@ void MSPI_voidInit(void);
 void  MSPI1_voidSendReceiveSync(u8 Copy_u16DataToTransimit , u8 Copy_u16DataToReceive );
 void  MSPI1_voidSendReceiveAsync(u8 Copy_u16DataToTransimit , u8 Copy_u16DataToReceive);
 
-void MSPI2_voidSendReceiveSync(u8 Copy_u16DataToTransimit , u8 Copy_u16DataToReceive);
-void MSPI2_voidSendReceiveAsync(u8 Copy_u16DataToTransimit , u8 Copy_u16DataToReceive);
+//void MSPI2_voidSendReceiveSync(u8 Copy_u16DataToTransimit , u8 Copy_u16DataToReceive);
+//void MSPI2_voidSendReceiveAsync(u8 Copy_u16DataToTransimit , u8 Copy_u16DataToReceive);
 
 #endif 
