@@ -9,6 +9,9 @@
 #ifndef SPI_CONFIG_H_
 #define SPI_CONFIG_H_
 
+  
+#define MSPI_1_NSS_1_PIN         PINA2
+  
   /* macro for enable or disable spi module */
 #define MSPI_ENABLE  1
 #define MSPI_DISABLE 0
