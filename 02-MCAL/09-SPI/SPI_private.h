@@ -25,12 +25,12 @@ typedef struct
     volatile u32 I2SPR;
 }SPI_t;
 
-#define SPI_1_BASE_ADDRESS  0X40013000
-#define SPI_1 ((volatile SPI_t*)SPI_1_BASE_ADDRESS))
+#define MPI_1_BASE_ADDRESS  0X40013000
+#define MSPI_1 ((volatile SPI_t*)SPI_1_BASE_ADDRESS))
 
 //SPI2
-/*#define SPI_2_BASE_ADDRESS   0X40005800
-#define SPI2                ((volatile SPI_t * const)(SPI_2_BASE_ADDRESS))*/
+/*#define MSPI_2_BASE_ADDRESS   0X40005800
+#define MSPI2                ((volatile SPI_t * const)(SPI_2_BASE_ADDRESS))*/
 
 
 #endif 
