@@ -45,7 +45,30 @@
 
 #define MSPI_CLK_PHASE_HIGH 1 // The second clock transition is the first data capture edge
 #define MSPI_CLK_PHASE_LOW  0 // The first clock transition is the first data capture edge 
+
   
+  /*REG CR1 Configuration*/
+#define SPI1_BIDIMODE         0
+#define SPI1_BIDIOE           0
+#define SPI1_CRCEN            0
+#define SPI1_CRCNEXT          0
+#define SPI1_FRAME_FORMAT     1
+#define SPI1_RXONLY           0
+#define SPI1_SSM              0
+#define SPI1_SSI              0
+#define SPI1_LSBFIRST         1
+#define SPI1_SPE              1
+#define SPI1_BR               000
+#define SPI1_MSTR             1
+#define SPI1_CPOL             0
+#define SPI1_CPHA             1
+/*REG CR2 Configuration*/
+#define SPI1_TXEIE            0
+#define SPI1_RXNEIE           0
+#define SPI1_ERRIE            0
+#define SPI1_SSOE             0
+#define SPI1_TXDMAEN          0
+#define SPI1_RXDMAEN          0
   
 #endif /*File_H_*/
 
