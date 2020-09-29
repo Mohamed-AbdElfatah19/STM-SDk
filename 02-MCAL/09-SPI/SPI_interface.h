@@ -9,6 +9,10 @@
 #ifndef SPI_INTERFACE_H_
 #define SPI_INTERFACE_H_
 
+#define MSPI_1_MOSI_PIN        PINA7
+#define MSPI_1_MISO_PIN        PINA6
+#define MSPI_1_CLK_PIN         PINA5
+#define MSPI_1_NSS_PIN         PINA4
 
 /******************************************************************************
 * Function Prototypes
