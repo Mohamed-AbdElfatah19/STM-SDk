@@ -6,6 +6,8 @@
 #ifndef SPI_PRIVATE_H
 #define SPI_PRIVATE_H
 
+ 
+#define      SPI_MAX_CH          2 
   
 /* registers Definations */
 volatile u32 *SPI[SPI_MAX_CH] = {(u32*) (0x40013000) ,(u32 *) (0x40003800) } ;
