@@ -14,8 +14,9 @@
 #define MSPI_DISABLE 0
 
   /* macro for determine master or slave */
-#define MSPI_MASTER_MODE 
-#define MSPI_SLAVE_MODE
+#define MSPI_1_MODE MSPI_MASTER_MODE
+#define MSPI_MASTER_MODE 1
+#define MSPI_SLAVE_MODE  0
   
   /* macro for select which bit is sent first LSB or MSB */
 #define MSPI_LSB_FIRST 1
