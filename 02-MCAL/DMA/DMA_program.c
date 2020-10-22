@@ -129,3 +129,20 @@ void DMA1_Channel1_IRQHandler(void){
 }
 			 
 			 
+  void MDMA_VidClearFlag( u8 Copy_u8Channel , u8 Copy_u8Flag )
+{
+	Copy_u8Channel *= 4 ;
+
+	SET_BIT( MDMA->IFCR , (Copy_u8Channel + Copy_u8Flag) );
+}	
+			 
+u8   MDMA_u8GetFlag( u8 Copy_u8Channel , u8 Copy_u8Flag )
+{
+        u8 LOC_u8Result = 0;
+
+	Copy_u8Channel *= 4 ;
+
+	LOC_u8Result = GET_BIT( MDMA->ISR , ( Copy_u8Channel + Copy_u8Flag ) );
+
+	return LOC_u8Result ;	
+}	
