@@ -85,3 +85,9 @@ void MDMA_VidInit(u8 Copy_u8Channel , u8 Copy_u8Direction , u8 Copy_u8Mode , u8 
     }
  
 }
+
+void MDMA_VidDMAEnable ((u8 Copy_u8Channel ) 
+{ 
+    CLR_BIT(MDMA->channel[Copy_u8Channel].CCR ,
+}
+void MDMA_VidDMADisable ((u8 Copy_u8Channel ) 
