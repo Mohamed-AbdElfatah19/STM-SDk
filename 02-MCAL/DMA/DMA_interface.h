@@ -52,5 +52,7 @@
  
 ////////////////////////////////////////////////////////////////////////// Interfaces ProtoTypes /////////////////////////////////////////////////////////////////////////////
   void MDMA_VidInit(u8 Copy_u8Channel , u8 Copy_u8Direction , u8 Copy_u8Mode , u8 Copy_U8Pinc , u8 Copy_u8Minc , u8 Copy_u8MemorySize , u8 Copy_u8PeripheralSize , u8 Copy_u8ChannelPrio ) ;
-  
+  void MDMA_VidDMAEnable ((u8 Copy_u8Channel ) ;
+  void MDMA_VidDMADisable ((u8 Copy_u8Channel ) ;                       
+                       
   #endif 
