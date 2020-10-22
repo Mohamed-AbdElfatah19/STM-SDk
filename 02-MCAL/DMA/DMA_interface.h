@@ -44,10 +44,10 @@
 #define MEM_INCREMENT_DISABLE 1
   
 ///////Channel Priority ///////////////////////////////
-#define DMA_LOW         0
-#define DMA_MEDIUM      1
-#define DMA_HIGH        2
-#define DMA_VERY_HIGH   3
+#define LOW         0
+#define MEDIUM      1
+#define HIGH        2
+#define VERY_HIGH   3
 
  
 ////////////////////////////////////////////////////////////////////////// Interfaces ProtoTypes /////////////////////////////////////////////////////////////////////////////
