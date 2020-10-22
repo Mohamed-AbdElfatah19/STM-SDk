@@ -16,13 +16,13 @@
    volatile u32 CPAR  ;
    volatile u32 CMAR  ;
    volatile u32 Reserved ;
-  }DMA_channel ;
+  }DMA ;
   
 
   typedef struct {
    volatile u32 ISR          ;  
    volatile u32 IFCR         ;
-   DMA_channel channel[7]    ;
+   DMA channel[7]    ;
   }DMA_t ;
   
 #define DMA_BASE_ADDRESS ((volatile DMA_t*)0x40020000)
