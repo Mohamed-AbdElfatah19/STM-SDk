@@ -59,5 +59,12 @@
   void MDMA_VidInit(u8 Copy_u8Channel , u8 Copy_u8Direction , u8 Copy_u8Mode , u8 Copy_U8Pinc , u8 Copy_u8Minc , u8 Copy_u8MemorySize , u8 Copy_u8PeripheralSize , u8 Copy_u8ChannelPrio ) ;
   void MDMA_VidDMAEnable ((u8 Copy_u8Channel ) ;
   void MDMA_VidDMADisable ((u8 Copy_u8Channel ) ;                       
-                       
+  void MDMA_VidInerruptEnable( u8 Copy_u8Channel , u8 Copy_u8INTSource ) ;
+  void MDMA_VidSetAddresses (u8 Copy_u8Channel , u32 * PeripheralAddress , u32 * MemoryAddress , u16 Copy_u16NDT ) ;
+  void MDMA_VidSetCallBackChannel1( void ( *Ptr ) ( void ) );
+  void MDMA_VidClearFlag( u8 Copy_u8Channel , u8 Copy_u8Flag );
+  u8   MDMA_u8GetFlag( u8 Copy_u8Channel , u8 Copy_u8Flag );
+
+  
+  
   #endif 
