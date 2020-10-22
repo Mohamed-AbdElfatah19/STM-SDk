@@ -88,6 +88,44 @@ void MDMA_VidInit(u8 Copy_u8Channel , u8 Copy_u8Direction , u8 Copy_u8Mode , u8 
 
 void MDMA_VidDMAEnable ((u8 Copy_u8Channel ) 
 { 
-    CLR_BIT(MDMA->channel[Copy_u8Channel].CCR ,
+	if( Copy_u8Channel > 6 ) 
+	{
+           retun ; 
+	}
+	u8  ChannelNo  = Copy_u8Channel  * 4 ;
+       CLR_BIT(MDMA->channel[Copy_u8Channel].IFCR ,  ChannelNo  + DMA_GIF)  ;
+       CLR_BIT(MDMA->channel[Copy_u8Channel].IFCR ,  ChannelNo  + DMA_TCIF) ;
+       CLR_BIT(MDMA->channel[Copy_u8Channel].IFCR , ChannelNo  + DMA_HTIF)   ;
+       CLR_BIT(MDMA->channel[Copy_u8Channel].IFCR ,  ChannelNo  + DMA_TEIF) ;
+	
+	CLR_BIT(MDMA->channel[Copy_u8Channel].CCR , 0 ) ;
+       
 }
 void MDMA_VidDMADisable ((u8 Copy_u8Channel ) 
+{
+  	CLR_BIT(MDMA->channel[Copy_u8Channel].CCR , 0 ) ;
+}
+			 
+void MDMA_VidInerruptEnable( u8 Copy_u8Channel , u8 Copy_u8INTSource )
+{
+/////////////					
+}
+			 
+void MDMA_VidSetAddresses (u8 Copy_u8Channel , u32 * PeripheralAddress , u32 * MemoryAddress , u16 Copy_u16NDT )
+{
+    MDMA->channel[Copy_u8Channel].CPAR = PeripheralAddress ;
+    MDMA->channel[Copy_u8Channel].CMAR = MemoryAddress ;
+    MDMA->channel[ Copy_u8Channel ].CNDTR =  Copy_u16NDT ;
+}
+void MDMA_VidSetCallBackChannel1( void ( *Ptr ) ( void ) ){
+
+	DMA_CallBackChannel1 = Ptr ;
+
+}
+
+void DMA1_Channel1_IRQHandler(void){
+
+	DMA_CallBackChannel1();
+}
+			 
+			 
