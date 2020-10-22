@@ -49,6 +49,11 @@
 #define HIGH        2
 #define VERY_HIGH   3
 
+  ///////// Interrupt Flags //////////
+#define DMA_GIF   0
+#define DMA_TCIF  1
+#define DMA_HTIF  2
+#define DMA_TEIF  3
  
 ////////////////////////////////////////////////////////////////////////// Interfaces ProtoTypes /////////////////////////////////////////////////////////////////////////////
   void MDMA_VidInit(u8 Copy_u8Channel , u8 Copy_u8Direction , u8 Copy_u8Mode , u8 Copy_U8Pinc , u8 Copy_u8Minc , u8 Copy_u8MemorySize , u8 Copy_u8PeripheralSize , u8 Copy_u8ChannelPrio ) ;
